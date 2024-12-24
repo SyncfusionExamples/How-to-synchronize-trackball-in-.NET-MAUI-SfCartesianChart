@@ -2,7 +2,7 @@
 
 In this article, we described how to synchronize the trackball in multiple SfCartesian charts. 
 
-The [Trackball](https://help.syncfusion.com/maui/cartesian-charts/trackball){target="_blank"} feature in [Syncfusion MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/getting-started){target="_blank"} is an interactive functionality that allows users to track and display data points on a chart as they hover over on different areas of the chart. It provides real-time feedback by showing a marker or tooltip with relevant data, such as the value of a specific point on the chart. This enhances the user experience by providing detailed information about specific data points.
+The [Trackball](https://help.syncfusion.com/maui/cartesian-charts/trackball) feature in [Syncfusion MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/getting-started) is an interactive functionality that allows users to track and display data points on a chart as they hover over on different areas of the chart. It provides real-time feedback by showing a marker or tooltip with relevant data, such as the value of a specific point on the chart. This enhances the user experience by providing detailed information about specific data points.
 
 **Importance of Synchronizing Trackball:**
 
@@ -14,7 +14,7 @@ The [Trackball](https://help.syncfusion.com/maui/cartesian-charts/trackball){tar
 
 **Step 1: Set Up Multiple Charts**
 Determine the number of charts you need to create to effectively visualize your data. Initialize a grid with the desired number of rows and columns.
-Let’s configure the Syncfusion .NET MAUI SfCartesian Chart using this [getting started documentation](https://help.syncfusion.com/maui/cartesian-charts/getting-started){target="_blank"} in each grid cells. Assign a unique x: Name to each of the charts. Refer to the following code example to create multiple charts in your application.
+Let’s configure the Syncfusion .NET MAUI SfCartesian Chart using this [getting started documentation](https://help.syncfusion.com/maui/cartesian-charts/getting-started) in each grid cells. Assign a unique x: Name to each of the charts. Refer to the following code example to create multiple charts in your application.
 
  
  ```xml
@@ -72,7 +72,7 @@ Let’s configure the Syncfusion .NET MAUI SfCartesian Chart using this [getting
 
 
 **Step 2: Initialize TrackballBehavior**
-Initialize TrackballBehavior for each chart and specify a unique x: Name for each of the [ChartTrackballBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html?tabs=tabid-3){target="_blank"}. Refer to the following code to initialize TrackballBehavior.
+Initialize TrackballBehavior for each chart and specify a unique x: Name for each of the [ChartTrackballBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html?tabs=tabid-3). Refer to the following code to initialize TrackballBehavior.
 
  
  ```xml
@@ -86,7 +86,7 @@ Similarly, you have to mention for other charts also.
 
 **Step 3: Handle the TrackballCreated events**
 Handling the TrackballCreated events is crucial for synchronizing the trackball across multiple SfCartesianChart controls
-[TrackballCreated Event](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballCreated){target="_blank"}: This event is triggered when the trackball is created or updated. By handling this event, you can synchronize the trackball position across multiple charts.
+[TrackballCreated Event](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_TrackballCreated): This event is triggered when the trackball is created or updated. By handling this event, you can synchronize the trackball position across multiple charts.
 In your XAML, ensure that the TrackballCreated event is wired up for each chart.
  
  ```xml
@@ -168,7 +168,7 @@ public partial class MainPage : ContentPage
     } 
  ```
 
-In the above code, we have used the [ValueToPoint(ChartAxis axis, double value)](https://help.syncfusion.com/maui/cartesian-charts/transform-axis-value-to-pixel-value-and-vice-versa){target="_blank"} method to convert the data point value to the screen point, and the ToOADate method is used to convert the DateTime value to a double value here. Then we have to specify those points in the ChartTrackballBehavior class show method to show synchronized trackball for all charts.
+In the above code, we have used the [ValueToPoint(ChartAxis axis, double value)](https://help.syncfusion.com/maui/cartesian-charts/transform-axis-value-to-pixel-value-and-vice-versa) method to convert the data point value to the screen point, and the ToOADate method is used to convert the DateTime value to a double value here. Then we have to specify those points in the ChartTrackballBehavior class show method to show synchronized trackball for all charts.
 
 The following demo illustrates multiple charts in .NET MAUI with synchronized trackball, showing how the trackball positions move together across all charts when interacting with any one chart, following the implemented synchronization steps.
 
@@ -176,10 +176,10 @@ The following demo illustrates multiple charts in .NET MAUI with synchronized tr
  
  ![ trackball synchronization](https://support.syncfusion.com/kb/agent/attachment/article/18647/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzQyIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.SlnHed6aMQ8riGFUC2tKxYKLejojSUzYboX56xNEgxA)
 
-You can find the complete sample from this GitHub Repo [link](https://github.com/SyncfusionExamples/How-to-synchronize-trackball-in-.NET-MAUI-SfCartesianChart){target="_blank"}.
+You can find the complete sample from this GitHub Repo [link](https://github.com/SyncfusionExamples/How-to-synchronize-trackball-in-.NET-MAUI-SfCartesianChart).
 
 **Conclusion:**
 
-I hope you enjoyed learning about how to Synchronize Trackball in [.NET MAUI Multiple Cartesian Chart.](https://help.syncfusion.com/maui/cartesian-charts/getting-started){target="_blank"}
-You can refer to our [.NET MAUI CartesianChart feature tour page](https://www.syncfusion.com/maui-controls/maui-cartesian-charts){target="_blank"} to know about its other groundbreaking feature representations. You can also explore our [.NET MAUI Chart documentation](https://help.syncfusion.com/maui/cartesian-charts/getting-started){target="_blank"} to understand how to present and manipulate data. For current customers, you can check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense){target="_blank"} page. If you are new to Syncfusion, you can try our 30-day [free trail](https://www.syncfusion.com/downloads/maui){target="_blank"} to check out our other controls. If you have any queries or require clarifications, please let us know in the comments section below. You can also contact us through our [support forums](https://www.syncfusion.com/forums){target="_blank"}, [Direct-Trac](https://support.syncfusion.com/create){target="_blank"}, or [feedback portal](https://www.syncfusion.com/feedback/maui?control=sfcartesianchart){target="_blank"}. We are always happy to assist you!
+I hope you enjoyed learning about how to Synchronize Trackball in [.NET MAUI Multiple Cartesian Chart.](https://help.syncfusion.com/maui/cartesian-charts/getting-started)
+You can refer to our [.NET MAUI CartesianChart feature tour page](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) to know about its other groundbreaking feature representations. You can also explore our [.NET MAUI Chart documentation](https://help.syncfusion.com/maui/cartesian-charts/getting-started) to understand how to present and manipulate data. For current customers, you can check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion, you can try our 30-day [free trail](https://www.syncfusion.com/downloads/maui) to check out our other controls. If you have any queries or require clarifications, please let us know in the comments section below. You can also contact us through our [support forums](https://www.syncfusion.com/forums), [Direct-Trac](https://support.syncfusion.com/create), or [feedback portal](https://www.syncfusion.com/feedback/maui?control=sfcartesianchart). We are always happy to assist you!
 
