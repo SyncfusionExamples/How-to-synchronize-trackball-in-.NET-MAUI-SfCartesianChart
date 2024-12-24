@@ -116,7 +116,7 @@ public partial class MainPage : ContentPage
 
         if (pointsInfo.Count > 0)
         {
-            var item = (Model)pointsInfo[0].DataItem;
+            var item = (DataModel)pointsInfo[0].DataItem;
 
             // Convert chart point to screen point
             float xPoint = firstChart.ValueToPoint(firstChart.XAxes[0], item.Date.ToOADate());
@@ -135,7 +135,7 @@ public partial class MainPage : ContentPage
 
         if (pointsInfo.Count > 0)
         {
-            var item = (Model)pointsInfo[0].DataItem;
+            var item = (DataModel)pointsInfo[0].DataItem;
 
             // Convert chart point to screen point
             float xPoint = secondChart.ValueToPoint(secondChart.XAxes[0], item.Date.ToOADate());
@@ -154,7 +154,7 @@ public partial class MainPage : ContentPage
 
         if (pointsInfo.Count > 0)
         {
-            var item = (Model)pointsInfo[0].DataItem;
+            var item = (DataModel)pointsInfo[0].DataItem;
 
             // Convert chart point to screen point
             float xPoint = thirdChart.ValueToPoint(thirdChart.XAxes[0], item.Date.ToOADate());
@@ -175,5 +175,3 @@ The following demo illustrates multiple charts in .NET MAUI with synchronized tr
 **Output:**
  
  ![ trackball synchronization](https://support.syncfusion.com/kb/agent/attachment/article/18647/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzQyIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.SlnHed6aMQ8riGFUC2tKxYKLejojSUzYboX56xNEgxA)
-
-You can find the complete sample from this GitHub Repo [link](https://github.com/SyncfusionExamples/How-to-synchronize-trackball-in-.NET-MAUI-SfCartesianChart).
