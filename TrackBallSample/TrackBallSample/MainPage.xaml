@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackBallSample.MainPage"
+             xmlns:local="clr-namespace:TrackBallSample.ViewModel"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <Grid>
+        <!-- Define 3 rows for the grid layout -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Binding the ViewModel to the Grid -->
+        <Grid.BindingContext>
+            <local:ViewModel x:Name="viewModel"/>
+        </Grid.BindingContext>
+
+        <!-- Chart 1: Spline Chart -->
+        <chart:SfCartesianChart Grid.Row="0" x:Name="firstChart" TrackballCreated="firstChart_TrackballCreated">
+
+            <chart:SfCartesianChart.Resources>
+                <DataTemplate x:Key="trackballTemplate">
+                    <HorizontalStackLayout HorizontalOptions="Center" Margin="2">
+                        <Ellipse Fill="#D15007"
+                                 HeightRequest="12"
+                                 WidthRequest="12"
+                                 Margin="2,0"/>
+                        <Label Text="{Binding DataItem.Value}"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </chart:SfCartesianChart.Resources>
+
+            <!-- Initializing primary axis -->
+            <chart:SfCartesianChart.XAxes>
+                <chart:DateTimeAxis PlotOffsetEnd="30" PlotOffsetStart="30"/>
+            </chart:SfCartesianChart.XAxes>
+
+            <!-- Initializing secondary axis -->
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis/>
+            </chart:SfCartesianChart.YAxes>
+
+            <!-- Trackball Behavior Setup -->
+            <chart:SfCartesianChart.TrackballBehavior>
+                <chart:ChartTrackballBehavior x:Name="trackBall1">
+                    <chart:ChartTrackballBehavior.MarkerSettings>
+                        <chart:ChartMarkerSettings Width="8"
+                                                   Height="8"
+                                                   Fill="#FFFFFF"
+                                                   Stroke="#D15007"
+                                                   StrokeWidth="1"/>
+                    </chart:ChartTrackballBehavior.MarkerSettings>
+                </chart:ChartTrackballBehavior>
+            </chart:SfCartesianChart.TrackballBehavior>
+
+            <!--Initialize the series for chart-->
+            <chart:SplineSeries ItemsSource="{Binding DataCollection1}"
+                                XBindingPath="Date"
+                                YBindingPath="Value"
+                                Fill="#D15007"
+                                ShowMarkers="True"
+                                TrackballLabelTemplate="{StaticResource trackballTemplate}">
+                <chart:SplineSeries.MarkerSettings>
+                    <chart:ChartMarkerSettings Width="8"
+                                               Height="8"
+                                               Fill="#FFFFFF"
+                                               Stroke="#D15007"
+                                               StrokeWidth="1"/>
+                </chart:SplineSeries.MarkerSettings>
+            </chart:SplineSeries>
+        </chart:SfCartesianChart>
+
+        <!-- Chart 2: Step Line Chart -->
+        <chart:SfCartesianChart Grid.Row="1" x:Name="secondChart" TrackballCreated="secondChart_TrackballCreated">
+
+            <chart:SfCartesianChart.Resources>
+                <DataTemplate x:Key="trackballTemplate">
+                    <HorizontalStackLayout HorizontalOptions="Center" Margin="2">
+                        <Ellipse Fill="#10AD4F"
+                                 HeightRequest="12"
+                                 WidthRequest="12"
+                                 Margin="2,0"/>
+                        <Label Text="{Binding DataItem.Value}"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </chart:SfCartesianChart.Resources>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:DateTimeAxis PlotOffsetEnd="30" PlotOffsetStart="30"/>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis/>
+            </chart:SfCartesianChart.YAxes>
+
+            <!-- Trackball Behavior Setup -->
+            <chart:SfCartesianChart.TrackballBehavior>
+                <chart:ChartTrackballBehavior x:Name="trackBall2">
+                    <chart:ChartTrackballBehavior.MarkerSettings>
+                        <chart:ChartMarkerSettings Width="8"
+                                                   Height="8"
+                                                   Fill="#FFFFFF"
+                                                   Stroke="#10AD4F"
+                                                   StrokeWidth="1"/>
+                    </chart:ChartTrackballBehavior.MarkerSettings>
+                </chart:ChartTrackballBehavior>
+            </chart:SfCartesianChart.TrackballBehavior>
+
+            <!--Initialize the series for chart-->
+            <chart:StepLineSeries ItemsSource="{Binding DataCollection2}"
+                                  XBindingPath="Date"
+                                  YBindingPath="Value"
+                                  ShowMarkers="False"
+                                  Fill="#10AD4F"
+                                  TrackballLabelTemplate="{StaticResource trackballTemplate}">
+                <chart:StepLineSeries.MarkerSettings>
+                    <chart:ChartMarkerSettings Width="8"
+                                               Height="8"
+                                               Fill="#FFFFFF"
+                                               Stroke="#10AD4F"
+                                               StrokeWidth="1"/>
+                </chart:StepLineSeries.MarkerSettings>
+            </chart:StepLineSeries>
+        </chart:SfCartesianChart>
+
+        <!-- Chart 3: Spline Chart with Dashline -->
+        <chart:SfCartesianChart Grid.Row="2" x:Name="thirdChart" TrackballCreated="thirdChart_TrackballCreated">
+
+            <chart:SfCartesianChart.Resources>
+                <!-- DashArray for dashed lines in the chart -->
+                <DoubleCollection x:Key="dashArray">
+                    <x:Double>6</x:Double>
+                    <x:Double>3</x:Double>
+                    <x:Double>3</x:Double>
+                    <x:Double>3</x:Double>
+                </DoubleCollection>
+
+                <!-- Trackball template for Chart 3 -->
+                <DataTemplate x:Key="trackballTemplate">
+                    <HorizontalStackLayout HorizontalOptions="Center" Margin="2">
+                        <Ellipse Fill="#9730E7"
+                                 HeightRequest="12"
+                                 WidthRequest="12"
+                                 Margin="2,0"/>
+                        <Label Text="{Binding DataItem.Value}"
+                               FontSize="14"
+                               HorizontalOptions="Center"
+                               TextColor="White"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </chart:SfCartesianChart.Resources>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:DateTimeAxis PlotOffsetEnd="30" PlotOffsetStart="30"/>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis/>
+            </chart:SfCartesianChart.YAxes>
+
+            <!-- Trackball Behavior Setup -->
+            <chart:SfCartesianChart.TrackballBehavior>
+                <chart:ChartTrackballBehavior x:Name="trackBall3">
+                    <chart:ChartTrackballBehavior.MarkerSettings>
+                        <chart:ChartMarkerSettings Width="8"
+                                                   Height="8"
+                                                   Fill="#FFFFFF"
+                                                   Stroke="#9730E7"
+                                                   StrokeWidth="1"/>
+                    </chart:ChartTrackballBehavior.MarkerSettings>
+                </chart:ChartTrackballBehavior>
+            </chart:SfCartesianChart.TrackballBehavior>
+
+            <!--Initialize the series for chart-->
+            <chart:SplineSeries ItemsSource="{Binding DataCollection3}"
+                                XBindingPath="Date"
+                                YBindingPath="Value"
+                                StrokeDashArray="{StaticResource dashArray}"
+                                Fill="#9730E7"
+                                TrackballLabelTemplate="{StaticResource trackballTemplate}"
+                                ShowMarkers="True">
+                <chart:SplineSeries.MarkerSettings>
+                    <chart:ChartMarkerSettings Width="8"
+                                               Height="8"
+                                               Fill="#FFFFFF"
+                                               Stroke="#9730E7"
+                                               StrokeWidth="1"/>
+                </chart:SplineSeries.MarkerSettings>
+            </chart:SplineSeries>
+        </chart:SfCartesianChart>
+
+    </Grid>
+</ContentPage>
