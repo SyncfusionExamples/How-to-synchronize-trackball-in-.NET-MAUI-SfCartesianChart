@@ -1,4 +1,4 @@
-# How-to-synchronize-trackball-in-.NET-MAUI-SfCartesianChart
+# How to synchronize trackball in .NET MAUI SfCartesianChart
 
 In this article, we described how to synchronize the trackball in multiple SfCartesian charts. 
 
@@ -177,9 +177,3 @@ The following demo illustrates multiple charts in .NET MAUI with synchronized tr
  ![ trackball synchronization](https://support.syncfusion.com/kb/agent/attachment/article/18647/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzQyIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.SlnHed6aMQ8riGFUC2tKxYKLejojSUzYboX56xNEgxA)
 
 You can find the complete sample from this GitHub Repo [link](https://github.com/SyncfusionExamples/How-to-synchronize-trackball-in-.NET-MAUI-SfCartesianChart).
-
-**Conclusion:**
-
-I hope you enjoyed learning about how to Synchronize Trackball in [.NET MAUI Multiple Cartesian Chart.](https://help.syncfusion.com/maui/cartesian-charts/getting-started)
-You can refer to our [.NET MAUI CartesianChart feature tour page](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) to know about its other groundbreaking feature representations. You can also explore our [.NET MAUI Chart documentation](https://help.syncfusion.com/maui/cartesian-charts/getting-started) to understand how to present and manipulate data. For current customers, you can check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion, you can try our 30-day [free trail](https://www.syncfusion.com/downloads/maui) to check out our other controls. If you have any queries or require clarifications, please let us know in the comments section below. You can also contact us through our [support forums](https://www.syncfusion.com/forums), [Direct-Trac](https://support.syncfusion.com/create), or [feedback portal](https://www.syncfusion.com/feedback/maui?control=sfcartesianchart). We are always happy to assist you!
-
