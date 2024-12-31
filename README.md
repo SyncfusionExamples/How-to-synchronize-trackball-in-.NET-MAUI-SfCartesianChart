@@ -163,4 +163,4 @@ The following demo illustrates multiple charts in .NET MAUI with synchronized tr
 
 If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
 
-For more details, refer to the KB on [How to synchronize trackball in .NET MAUI SfCartesianChart ?](https://support.syncfusion.com/agent/kb/18647)
+For more details, refer to the KB on [How to synchronize trackball in .NET MAUI SfCartesianChart ?](https://support.syncfusion.com/kb/article/18647/how-to-synchronize-trackball-in-net-maui-sfcartesianchart-)
